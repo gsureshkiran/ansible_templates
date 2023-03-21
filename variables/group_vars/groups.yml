@@ -1,0 +1,10 @@
+---
+- name: configure web services
+  hosts: all #mention the grouping name or server
+  tasks:
+   - name: this is the {{ web_package }} package
+     apt:
+      name: "{{ web_package }}"
+   - name: this is the {{ web_service }} service
+      apt:
+       name: "{{ web_ service }}

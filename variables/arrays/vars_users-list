@@ -1,0 +1,7 @@
+users:
+  - username: kiran
+    homedir: /home/kiran
+    shell: /bin/bash
+  - username: nani
+    homedir: /home/nani
+    shell: /bin/bash    

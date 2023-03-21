@@ -1,0 +1,13 @@
+---
+- name: show lists # lists also known as arrays
+  hosts: all
+  vars_files:
+   - vars/users-list
+  tasks:
+   - name: print array values
+     debug:
+      msg: "user {{ item.username }} has homedirectory {{ item.homedir }} and shell {{ item.shell }}"
+     lopp: "{{ users }}"
+   - name: print the secondary array value
+     debug:
+      msg: the second item is {{ users[1] }} 

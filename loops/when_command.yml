@@ -1,0 +1,14 @@
+---
+- name: when demo
+  hosts: all
+  vars:
+   supported_distros:
+    - redHat
+    - ubuntu
+    - centos
+  tasks:
+   - name: install RH family specific packages
+     yum:
+      name: nginx
+      state: present
+     when: ansible_distribution in supported_distros 
